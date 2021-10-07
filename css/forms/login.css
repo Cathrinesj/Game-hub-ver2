@@ -1,0 +1,10 @@
+form * {
+    margin: 5px;
+    display: block;
+    align-content: center;
+}
+
+.login-error {
+    display: none;
+    color: red;
+}

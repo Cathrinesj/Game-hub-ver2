@@ -1,0 +1,32 @@
+.contact-form * {
+    margin: 5px;
+    display: block;
+    align-content: center;
+}
+
+input {
+    border-style: groove;
+}
+
+button {
+    background-color: var(--purple);
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 12pt;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid var(--purple);
+}
+
+button:disabled {
+    background: lightgray;
+    border: 2px solid darkgray;
+}
+
+.messageSuccess {
+    background: green;
+    color: white;
+    padding: 1rem;
+    border-style: groove;
+    margin-bottom: 5px;
+}

@@ -10,6 +10,7 @@
     <title>GameHub | Log In</title>
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/media.css" rel="stylesheet" />
+    <link href="css/forms/login.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/2661e0888f.js"
       crossorigin="anonymous"
@@ -61,63 +62,43 @@
       <h1>Create Account;</h1>
       <form>
         <div>
-          <section>
-            <label for="username">Username</label>
-            <input
-              type="text"
-              name="username"
-              id="username"
-              class="form-input"
-            />
-            <label for="email">E-mail</label>
-            <input type="email" name="email" id="email" class="form-input" />
-            <label for="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              class="form-input"
-            />
-            <label for="confirmpassword">Confirm Password</label>
-            <input
-              type="password"
-              name="confirmpassword"
-              id="confirmpassword"
-              class="form-input"
-            />
-            <label for="streetadress">Street Adress</label>
-            <input
-              type="text"
-              name="streetadress"
-              id="streetadress"
-              class="form-input"
-            />
-            <label for="postcode">Postcode</label>
-            <input
-              type="number"
-              name="postcode"
-              id="postcode"
-              class="form-input"
-            />
-            <label for="postarea">Postarea</label>
-            <input
-              type="postarea"
-              name="postarea"
-              id="postarea"
-              class="form-input"
-            />
-            <label for="bankaccount">Bankaccount</label>
-            <input
-              type="number"
-              name="bankaccount"
-              id="bankaccount"
-              class="form-input"
-            />
-          </section>
+          <label
+            >Username (required)
+            <input type="text" name="username" id="username" />
+          </label>
+          <div class="login-error" id="usernameError">
+            Please enter a user name
+          </div>
         </div>
-        <input type="submit" value="Open account" class="cta-big" />
+        <div>
+          <label
+            >E-mail (required)
+            <input type="email" name="email" id="email" />
+          </label>
+          <div class="login-error" id="emailError">
+            Please enter a valid e-mail
+          </div>
+        </div>
+        <div>
+          <label
+            >Password (miniumum 8 characters)
+            <input type="password" name="password" id="password" />
+          </label>
+          <div class="login-error" id="passwordError">
+            Please enter a valid password (Minimum 8 characters)
+          </div>
+        </div>
+        <label
+          >Confirm Password
+          <input type="password" name="confirmPassword" id="confirmPassword" />
+        </label>
+        <div class="login-error" id="passwordError">
+          Please enter a valid password (Minimum 8 characters)
+        </div>
+        <a href="account.html" class="cta-big"> Open Account</a>
       </form>
     </main>
+    <script src="js/login.js"></script>
     <footer>
       <section class="footer-menu">
         <div>

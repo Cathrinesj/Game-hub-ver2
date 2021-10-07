@@ -145,10 +145,6 @@ footer {
   flex: 1;
 }
 
-.form-input {
-  margin: 10px;
-}
-
 footer {
   flex-shrink: 0;
  }

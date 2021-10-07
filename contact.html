@@ -6,7 +6,7 @@
     <meta name="description" content="GameHub - Need to reach us?" />
     <title>GameHub | Contact us</title>
     <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/form.css" rel="stylesheet" />
+    <link href="css/forms/contactform.css" rel="stylesheet" />
     <link href="css/media.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/2661e0888f.js"
@@ -65,24 +65,31 @@
         </p>
       </section>
       <section class="contact-form">
-        <div id="message"></div>
+        <div id="messageSuccess"></div>
         <form>
           <div>
-            <label>Full Name</label>
-            <input name="fullName" id="fullName" />
+            <label
+              >Full Name (required)
+              <input name="fullName" id="fullName" />
+            </label>
           </div>
           <div>
-            <label>E-mail (Required)</label>
-            <input name="email" id="email" />
+            <label
+              >E-mail (Required)
+              <input name="email" id="email" />
+            </label>
           </div>
           <div>
-            <label>Message (max 200 characters)</label>
-            <input name="message" id="e-mail" />
+            <label
+              >Message (miniumum 20 characters)
+              <input name="message" id="message" />
+            </label>
           </div>
-          <input type="submit" value="Send" class="cta-big" />
+          <button disabled>Send</button>
         </form>
       </section>
     </main>
+    <script src="js/contactform.js"></script>
     <footer>
       <section class="footer-menu">
         <div>
