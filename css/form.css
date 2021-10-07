@@ -1,0 +1,7 @@
+.contact-form * {
+    margin: 5px;
+}
+
+input {
+    border-style: groove;
+}
