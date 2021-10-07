@@ -1,0 +1,110 @@
+@media (min-width: 600px) {
+
+  /*General*/
+
+  .header-menu {
+    max-width: 1024px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  header label {
+    display: none;
+  }
+
+  header a {
+    max-width: 120px;
+  }
+
+  nav, ul {
+    display: inline-flex;
+  }
+  
+  .cta-big {
+    grid-column-start: 2;
+    grid-column-end: 4;
+  }
+
+  .footer-menu {
+    display: flex;
+    max-width: 1024px;
+    margin: auto;
+    text-decoration: underline;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+
+  /*Products*/
+ 
+  .productsnew, 
+  .productsused {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 600px;
+  }
+
+  .product-spec {
+    flex-direction: row;
+    max-width: 560px;
+  }
+
+  .product-text {
+    margin: 20px;
+  }
+
+  .categories {
+    display: inline-flex;
+    grid-column-start: 1;
+    grid-column-end: 5;
+  }
+  
+  /*FLEX*/
+  
+  .flex-wrap {
+    flex-direction: row;
+  }
+
+  /*Create account*/
+
+  .accountmenu {
+    display: inline-flex;
+    justify-content: space-evenly;
+  }
+
+} 
+
+@media (min-width: 1024px) {
+
+  /*General*/
+
+  .logo {
+    max-width: 200px;
+  }
+
+   /*Products*/
+  
+  .productsnew, 
+  .productsused {
+    max-width: 800px;
+  }
+
+  /*Flex*/
+
+  .main-content {
+    max-width: 900px;
+    margin: 0px 50px;
+    display:flex;
+  }
+
+  .forsale {
+    margin-right: 100px;
+    max-width: 600px;
+  }
+
+  .articles {
+    max-width: 300px;
+    margin: 50px auto;
+  }
+
+}  

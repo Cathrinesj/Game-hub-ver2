@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="GameHub - Sell games, to buy new ones" />
+    <title>GameHub | Sell Games</title>
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/sellgames.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
+    <script
+      src="https://kit.fontawesome.com/2661e0888f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Hotjar Tracking Code for https://blissful-nightingale-5010c1.netlify.app/ -->
+    <script>
+      (function (h, o, t, j, a, r) {
+        h.hj =
+          h.hj ||
+          function () {
+            (h.hj.q = h.hj.q || []).push(arguments);
+          };
+        h._hjSettings = { hjid: 2607683, hjsv: 6 };
+        a = o.getElementsByTagName("head")[0];
+        r = o.createElement("script");
+        r.async = 1;
+        r.src = t + h._hjSettings.hjid + j + h._hjSettings.hjsv;
+        a.appendChild(r);
+      })(window, document, "https://static.hotjar.com/c/hotjar-", ".js?sv=");
+    </script>
+  </head>
+  <body>
+    <header>
+      <div class="header-menu">
+        <a href="index.html"
+          ><img src="images/GameHub_Logo.png" alt="GameHub Logo" class="logo"
+        /></a>
+        <label for="hamburger-menu"><i class="fas fa-bars"></i></label>
+        <input type="checkbox" id="hamburger-menu" />
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="newgames.html">New Games</a></li>
+            <li><a href="newgames.html">Used Games</a></li>
+            <li class="active"><a href="sellgames.html">Sell Games</a></li>
+          </ul>
+        </nav>
+        <section class="nav-icons">
+          <a class="fas fa-search" href="search.html"></a>
+          <a class="fas fa-user" href="login.html"></a>
+          <a class="fas fa-heart" href="index.html"></a>
+          <a class="fas fa-desktop" href="basket.html"></a>
+        </section>
+      </div>
+    </header>
+    <main class="makeadd">
+      <section class="accountmenu">
+        <a href="account.html"><h2>Account</h2></a>
+        <h2 class="active">Games for Sale</h2>
+        <h2>Order History</h2>
+        <h2>Favourites</h2>
+      </section>
+      <h1>Make a new add</h1>
+      <form>
+        <div class="form-wrap">
+          <section>
+            <label for="addphotos">Add Photos+</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              cols="10"
+              class="form-input"
+            ></textarea>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              cols="10"
+              class="form-input"
+            ></textarea>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              cols="10"
+              class="form-input"
+            ></textarea>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              cols="10"
+              class="form-input"
+            ></textarea>
+          </section>
+          <section>
+            <label for="game">Game</label>
+            <input type="text" name="Game" id="Game" class="form-input" />
+            <label for="price">Name your price</label>
+            <input type="number" name="price" id="price" class="form-input" />
+            <label for="condition">Condition</label>
+            <input
+              type="text"
+              name="condition"
+              id="condition"
+              class="form-input"
+            />
+            <label for="description">Description</label>
+            <textarea
+              id="description"
+              name="description"
+              rows="5"
+              cols="30"
+              class="form-input"
+            ></textarea>
+            <p>Payment Method:</p>
+            <input
+              type="radio"
+              name="paymentmethod"
+              value="vipps"
+              id="vipps"
+              class="form-input"
+            /><label for="vipps">Vipps</label>
+            <input
+              type="radio"
+              name="paymentmethod"
+              value="banktransfer"
+              id="banltranser"
+              class="form-input"
+            /><label for="banktransfer">Bank Transfer</label>
+          </section>
+        </div>
+        <input type="submit" value="Create Add" class="cta-big" />
+      </form>
+    </main>
+    <footer>
+      <section class="footer-menu">
+        <div>
+          <a href="index.html" class="nav-footer">About Us</a>
+          <a href="contact.html" class="nav-footer">Contact Us</a>
+        </div>
+        <div>
+          <a href="index.html" class="nav-footer">Articles</a>
+          <a href="index.html" class="nav-footer">Chatroom</a>
+          <a href="index.html" class="nav-footer">Play Live</a>
+        </div>
+        <a href="index.html" class="nav-footer">
+          <p>Game Hub</p>
+          <p>Lillegata 10</p>
+          <p>8899 Oslo</p>
+        </a>
+      </section>
+    </footer>
+  </body>
+</html>
