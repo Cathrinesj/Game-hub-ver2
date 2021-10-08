@@ -7,35 +7,19 @@ function hamburgerNav() {
   }
 }
 
-const cartButton = document.querySelector("#cartButton");
+const displayCart = document.querySelector(".fa-desktop");
+const cartAmountTotal = localStorage.getItem("total");
+const cartItemTotal = localStorage.getItem("count");
 const cart = document.querySelector(".cart");
-const cartTotal = document.querySelector(".fa-desktop");
-let total = 0;
-let count = 0;
 
-cartButton.onclick = function () {
-  count++;
-  total += 199;
-  cart.style.display = "inline";
-  cart.innerHTML = ` ${total},-`;
-  localStorage.setItem("total", total);
-};
+cart.innerHTML = ` ${cartAmountTotal},-`;
 
-cartTotal.onclick = function () {
-  if (cartTotal.style.display === "block") {
-    cartTotal.style.display = "none";
+displayCart.onclick = function () {
+  if (displayCart.style.display === "block") {
+    displayCart.style.display = "inline";
+    displayCart.innerHTML = "";
   } else {
-    cartTotal.style.display = "block";
-    cartTotal.innerHTML = `Items: ${count} Total: NOK ${total},- <a href="basket.html" class="cta-small"> Checkout</a>`;
+    displayCart.style.display = "block";
+    displayCart.innerHTML = `Items: ${cartItemTotal} Total: NOK ${cartAmountTotal},- <a href="basket.html" class="cta-small"> Checkout</a>`;
   }
 };
-
-/*function cartTotal() {
-  const = cartTotal;
-  if (cartTotal.style.display === "block") {
-    cartTotal.style.display = "none";
-  } else {
-    cartTotal.style.display = "block";
-    cartTotal.innerHTML = `Items: ${count} Total; NOK ${total},- <a href="../../basket.html" class="cta-small"> Checkout</a>`;
-  }
-}*/
