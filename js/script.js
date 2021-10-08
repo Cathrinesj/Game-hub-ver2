@@ -20,6 +20,10 @@ displayCart.onclick = function () {
     displayCart.innerHTML = "";
   } else {
     displayCart.style.display = "block";
-    displayCart.innerHTML = `Items: ${cartItemTotal} Total: NOK ${cartAmountTotal},- <a href="basket.html" class="cta-small"> Checkout</a>`;
+    displayCart.innerHTML = `Items: ${cartItemTotal} Total: NOK ${cartAmountTotal},- <a href="checkout.html" class="cta-small"> Checkout</a>`;
   }
 };
+
+const checkOut = document.querySelector(".checkOut");
+
+checkOut.innerHTML = `Number of items: ${cartItemTotal} <h2>Total: ${cartAmountTotal},-</h2>`;

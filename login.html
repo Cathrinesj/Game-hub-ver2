@@ -10,7 +10,7 @@
     <title>GameHub | Log In</title>
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/media.css" rel="stylesheet" />
-    <link href="css/forms/login.css" rel="stylesheet" />
+    <link href="css/forms.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/2661e0888f.js"
       crossorigin="anonymous"
@@ -63,38 +63,39 @@
       <h1>Create Account;</h1>
       <form>
         <div>
-          <label
-            >Username (required)
+          <label>
+            Username (required)
+            <div class="login-error" id="usernameError">
+              Please enter a user name
+            </div>
             <input type="text" name="username" id="username" />
           </label>
-          <div class="login-error" id="usernameError">
-            Please enter a user name
-          </div>
         </div>
         <div>
-          <label
-            >E-mail (required)
+          <label>
+            E-mail (required)
+            <div class="login-error" id="emailError">
+              Please enter a valid e-mail
+            </div>
             <input type="email" name="email" id="email" />
           </label>
-          <div class="login-error" id="emailError">
-            Please enter a valid e-mail
-          </div>
         </div>
         <div>
-          <label
-            >Password (miniumum 8 characters)
+          <label>
+            Password (miniumum 8 characters)
+            <div class="login-error" id="passwordError">
+              Please enter a valid password
+            </div>
             <input type="password" name="password" id="password" />
           </label>
-          <div class="login-error" id="passwordError">
-            Please enter a valid password (Minimum 8 characters)
-          </div>
         </div>
         <label
           >Confirm Password
           <input type="password" name="confirmPassword" id="confirmPassword" />
         </label>
         <div class="login-error" id="passwordError">
-          Please enter a valid password (Minimum 8 characters)
+          <p>Please enter a valid password</p>
+          <p>(Minimum 8 characters)</p>
         </div>
         <button>Open Account</button>
       </form>
