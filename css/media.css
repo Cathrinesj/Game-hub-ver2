@@ -2,6 +2,10 @@
 
   /*General*/
 
+  main {
+    max-width: 600px;
+  }
+
   .header-menu {
     max-width: 1024px;
     display: flex;
@@ -10,7 +14,7 @@
     justify-content: space-evenly;
   }
 
-  header label {
+  header .icon {
     display: none;
   }
 
@@ -78,6 +82,10 @@
 
   /*General*/
 
+  main {
+    max-width: 800px;
+  }
+
   .logo {
     max-width: 200px;
   }
@@ -92,8 +100,6 @@
   /*Flex*/
 
   .main-content {
-    max-width: 900px;
-    margin: 0px 50px;
     display:flex;
   }
 

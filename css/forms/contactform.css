@@ -2,10 +2,12 @@
     margin: 5px;
     display: block;
     align-content: center;
+    max-width: 20rem;
 }
 
-input {
+input, textarea {
     border-style: groove;
+    width: 100%;
 }
 
 button {
