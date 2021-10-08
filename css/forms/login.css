@@ -8,3 +8,13 @@ form * {
     display: none;
     color: red;
 }
+
+button {
+    background-color: var(--purple);
+    color: #fff;
+    padding: 10px 30px;
+    font-size: 12pt;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid var(--purple);
+}

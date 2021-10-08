@@ -10,7 +10,7 @@ const confirmPassword = document.querySelector("#confirmPassword");
 function validateForm(event) {
   event.preventDefault();
 
-  if (checkLength(username.value, 0) === true) {
+  if (checkLength(username.value, 1) === true) {
     usernameError.style.display = "none";
   } else {
     usernameError.style.display = "block";
@@ -33,14 +33,12 @@ function validateForm(event) {
   } else {
     passwordError.style.display = "block";
   }
-
-  console.log("test");
 }
 
 form.addEventListener("submit", validateForm);
 
 function checkLength(value, len) {
-  if (value.trim().length > len) {
+  if (value.trim().length >= len) {
     return true;
   } else {
     return false;

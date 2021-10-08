@@ -24,7 +24,7 @@
   <body>
     <header>
       <div class="header-menu">
-        <a href=index.html><img src="../images/GameHub_Logo.png" alt="GameHub Logo" class=logo/></a>
+        <a href=../../index.html><img src="../images/GameHub_Logo.png" alt="GameHub Logo" class=logo/></a>
         <a href="javascript:void(0);" class="icon" onclick="hamburgerNav()">
           <i class="fas fa-bars"></i>
         </a>
@@ -40,7 +40,7 @@
           <a class="fas fa-search" href="../search.html"></a>
           <a class="fas fa-user" href="../login.html"></a>
           <a class="fas fa-heart" href="../index.html"></a>
-          <a class="fas fa-desktop" href="../basket.html"></a>
+          <i class="fas fa-desktop cart myCart" onclick="cartTotal()"></i>
         </section> 
       </div>
     </header>
@@ -59,7 +59,7 @@
         <section class="product-buy">  
           <h1>Fortnite</h1>
           <h2>NOK 199,-</h2>
-          <a href="../basket.html" class="cta-small"> Buy </a>
+          <div id=cartButton class="cta-small"> Buy</div>
         </section>
         <section class="product-text">
         <h2>Details;</h2>
@@ -70,7 +70,7 @@
         </section>
       </div>
     </main>  
-    <script src="js/script.js"></script>
+    <script src="../../js/script.js"></script>
     <footer>
       <section class="footer-menu">
       <div>
