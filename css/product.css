@@ -7,7 +7,6 @@ h1, h2 {
     display: flex;
     max-width: 320px;
     flex-direction: column;
-    align-items: left;
 }
   
 .product-image {
@@ -34,12 +33,13 @@ h1, h2 {
 .cta-small {
     max-width: 80px;
     margin-top: 10px;
+    padding: 6px 4px;
 }
 
 .cta-big {
     max-width: 125px;
     margin: 0px;
-    padding: 4px 2px;
+    padding: 6px 4px;
     font-size: 10pt;
 }
 

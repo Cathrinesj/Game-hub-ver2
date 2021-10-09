@@ -17,7 +17,7 @@ button {
     background-color: var(--purple);
     color: #fff;
     padding: 10px 30px;
-    margin: 10px 70px;
+    margin: auto;
     font-size: 12pt;
     text-align: center;
     border-radius: 50px;
@@ -34,10 +34,17 @@ button:disabled {
     color: red;
 }
 
-.messageSuccess {
+.message {
     background: var(--light-green);
-    color: white;
+    color: black;
     padding: 1rem;
+    border:var(--dark-green);
     border-style: groove;
     margin-bottom: 5px;
 }
+
+.accountMessage {
+    text-decoration: underline;
+    margin-top: 10px;
+}
+    

@@ -65,40 +65,40 @@
         <div>
           <label>
             Username (required)
+            <input type="text" name="username" id="username" />
             <div class="login-error" id="usernameError">
               Please enter a user name
             </div>
-            <input type="text" name="username" id="username" />
           </label>
         </div>
         <div>
           <label>
             E-mail (required)
+            <input type="email" name="email" id="email" />
             <div class="login-error" id="emailError">
               Please enter a valid e-mail
             </div>
-            <input type="email" name="email" id="email" />
           </label>
         </div>
         <div>
           <label>
             Password (miniumum 8 characters)
+            <input type="password" name="password" id="password" />
             <div class="login-error" id="passwordError">
               Please enter a valid password
             </div>
-            <input type="password" name="password" id="password" />
           </label>
         </div>
         <label
           >Confirm Password
           <input type="password" name="confirmPassword" id="confirmPassword" />
+          <div class="login-error" id="confirmPasswordError">
+            Please confirm Password
+          </div>
         </label>
-        <div class="login-error" id="passwordError">
-          <p>Please enter a valid password</p>
-          <p>(Minimum 8 characters)</p>
-        </div>
         <button>Open Account</button>
       </form>
+      <div class="accountSuccess"></div>
     </main>
     <script src="js/script.js"></script>
     <script src="js/login.js"></script>

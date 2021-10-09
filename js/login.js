@@ -6,6 +6,8 @@ const emailError = document.querySelector("#emailError");
 const password = document.querySelector("#password");
 const passwordError = document.querySelector("#passwordError");
 const confirmPassword = document.querySelector("#confirmPassword");
+const confirmPasswordError = document.querySelector("#confirmPasswordError");
+const accountSuccess = document.querySelector(".accountSuccess");
 
 function validateForm(event) {
   event.preventDefault();
@@ -16,7 +18,7 @@ function validateForm(event) {
     usernameError.style.display = "block";
   }
 
-  if (checkLength(email.value) === true) {
+  if (validateEmail(email.value) === true) {
     emailError.style.display = "none";
   } else {
     emailError.style.display = "block";
@@ -29,9 +31,9 @@ function validateForm(event) {
   }
 
   if (checkLength(confirmPassword.value, 7) === true) {
-    passwordError.style.display = "none";
+    confirmPasswordError.style.display = "none";
   } else {
-    passwordError.style.display = "block";
+    confirmPasswordError.style.display = "block";
   }
 }
 

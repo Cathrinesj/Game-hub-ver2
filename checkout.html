@@ -65,55 +65,67 @@
         <div class="checkOut"></div>
         <form>
           <div>
-            <label>
-              <h2>Payment Method;</h2>
-            </label>
+            <h2>Payment Method;</h2>
+            <label for="paymentMethod">
             <input
               type="radio"
               name="paymentmethod"
               value="vipps"
-              id="vipps"
-              class="form-input"
-            /><label for="vipps">Vipps</label>
-            <input
+              id="paymentMethod"
+            />Vipps
+              <input
               type="radio"
               name="paymentmethod"
               value="banktransfer"
-              id="banltranser"
-              class="form-input"
-            /><label for="banktransfer">Bank Transfer</label>
+              id="paymentMethod"
+            /> Banktransfer
+            </label>
+            <div class="login-error" id="paymentError">
+              Please choose payment Method
+            </div>
           </div>
           <h2>Delivery adress;</h2>
-          <div class="deliverydet">
-            <label for="fullname">Full Name</label>
-            <input
-              type="text"
-              name="fullname"
-              id="fullname"
-              class="form-input"
+          <label for="fullname">Full Name
+          <input
+            type="text"
+            name="fullname"
+            id="fullname"
             />
-            <label for="streetadress">Street Adress</label>
-            <input
-              type="text"
-              name="streetadress"
-              id="streetadress"
-              class="form-input"
-            />
-            <label for="postcode">Postcode</label>
+          </label>
+          <div class="login-error" id="fullnameError">
+            Please enter your full name
+          </div>
+          <label for="streetadress">Street Adress
+          <input
+            type="text"
+            name="streetadress"
+            id="streetadress"
+          />
+          </label>
+          <div class="login-error" id="streetadressError">
+            Please enter your street address
+          </div>
+          <label for="postcode">Postcode
             <input
               type="number"
               name="postcode"
               id="postcode"
-              class="form-input"
             />
-            <label for="postarea">Postarea</label>
+          </label>
+          <div class="login-error" id="postcodeError">
+            Please enter your postcode
+            </div>
+          <label for="postarea">Postarea
             <input
               type="postarea"
               name="postarea"
               id="postarea"
-              class="form-input"
             />
-            <label for="acceptterms">Accept terms and conditions</label>
+          </label>
+          <div class="login-error" id="postareaError">
+            Please enter your postarea
+          </div>
+          <label for="acceptterms">Accept terms and conditions
             <input
               type="radio"
               name="acceptterms"
@@ -121,14 +133,19 @@
               id="acceptterms"
               class="form-input"
             />
+          </label>
+          <div class="login-error" id="accepttermsError">
+            Please accept terms
           </div>
-        </form>
-        <div>
-          <a href="orderconfirmation.html" class="cta-big"> Place order</a>
         </div>
+        <div>
+          <button>Place order</button>
+        </div>
+        </form>
       </section>
     </main>
     <script src="js/script.js"></script>
+    <script src="js/checkout.js"></script>
     <footer>
       <section class="footer-menu">
         <div>

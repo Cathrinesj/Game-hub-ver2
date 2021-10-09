@@ -88,7 +88,7 @@ grid-row: 4;
 .cta-big {
   grid-column-start: 1;
   grid-column-end: 3;
-  }
+}
 
 .stories {
   margin-bottom: 20px; 

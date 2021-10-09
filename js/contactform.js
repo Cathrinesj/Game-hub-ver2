@@ -25,13 +25,11 @@ message.addEventListener("keyup", checkIfButtonDisabled);
 function submitForm(event) {
   event.preventDefault();
   messageSuccess.innerHTML =
-    '<div class="messageSuccess"> Your message has been sent, we will get back to you within 1-2 working days</div>';
+    '<div class="message">Your message has been sent</div>';
   form.reset();
-
-  console.log("test");
 }
 
-form.addEventListener("send", submitForm);
+form.addEventListener("submit", submitForm);
 
 function checkLength(value, len) {
   if (value.trim().length >= len) {
