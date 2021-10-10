@@ -11,6 +11,7 @@ const postarea = document.querySelector("#postarea");
 const postareaError = document.querySelector("#postareaError");
 const acceptterms = document.querySelector("#acceptterms");
 const accepttermsError = document.querySelector("#accepttermsError");
+const orderconfirmation = document.querySelector(".orderconfirmation");
 
 function validateForm(event) {
   event.preventDefault();
@@ -50,6 +51,8 @@ function validateForm(event) {
   } else {
     accepttermsError.style.display = "block";
   }
+  orderconfirmation.innerHTML =
+    '<a href=orderconfirmation.html class="accountMessage">Press here to check out the order confirmation!</a>';
 }
 
 form.addEventListener("submit", validateForm);

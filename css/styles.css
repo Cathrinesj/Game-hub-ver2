@@ -23,7 +23,7 @@ h2 {
 h3 {
   display: inline;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 12pt;
+  font-size: 10pt;
   font-style: bold; 
 }
 
@@ -57,6 +57,8 @@ header, nav {
 }
 
 header {
+  position: sticky;
+  top: 0;
   padding: 10px;
   border-bottom: 2px solid var(--dark-green);
 }

@@ -35,6 +35,8 @@ function validateForm(event) {
   } else {
     confirmPasswordError.style.display = "block";
   }
+  accountSuccess.innerHTML =
+    '<a href=account.html class="accountMessage">You account is now open, check it out!</a>';
 }
 
 form.addEventListener("submit", validateForm);

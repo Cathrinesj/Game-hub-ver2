@@ -29,6 +29,10 @@ h1, h2 {
     Margin: 10px;
     text-align: left;
 }
+
+.other-products {
+    max-width: 240px;
+}
   
 .cta-small {
     max-width: 80px;
