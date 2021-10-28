@@ -1,6 +1,6 @@
 //Products index page
 
-const url = "http://juvz.no/gamehub/wp-json/wc/store/products";
+const url = "https://juvz.no/gamehub/wp-json/wc/store/products";
 const productContainer = document.querySelector(".productsnew");
 
 async function getproducts() {
