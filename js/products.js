@@ -1,25 +1,61 @@
-//Products index page
+//Products newgames
 
-const url = "https://juvz.no/gamehub/wp-json/wc/store/products";
-const productContainer = document.querySelector(".productsnew");
+const urlNew = "https://juvz.no/wp-json/wc/store/products?category=16";
+const newProductContainer = document.querySelector(".newProducts");
 
-async function getproducts() {
+async function getNewProducts() {
   try {
-    const response = await fetch(url);
-    const getResults = await response.json();
-    createHTML(getResults);
+    const response = await fetch(urlNew);
+    const getResultsNew = await response.json();
+    createHTMLNew(getResultsNew);
   } catch (error) {
     console.log(error);
+    newProductContainer.innerHTML =
+      "Seems to be a glitch here, we are workin on it!";
   }
 }
 
-getproducts();
+getNewProducts();
 
-function createHTML(products) {
-  products.forEach(function (product) {
-    productContainer.innerHTML += `<div class="product">
-        <h2>${product.name}</h2>
-        <img src="${product.images[0].src}" alt="${product.name}">
-        </div>`;
+function createHTMLNew(newProducts) {
+  newProducts.forEach(function (product) {
+    for (let i = 0; i < product.length; i++) {
+      if (product[i].name === "Used Game") continue;
+    }
+    newProductContainer.innerHTML += `<div class="product-link"><a href="product.html?id=${product.id}">
+      <img src="${product.images[0].src}" alt="${product.name}"/>
+      <h2>${product.price_html}</h2>
+      <h2>${product.name}</h2></div>`;
+  });
+}
+
+//Products usedgames
+
+const urlUsed = "https://juvz.no/wp-json/wc/store/products?category=17";
+const usedProductContainer = document.querySelector(".usedProducts");
+
+async function getUsedProducts() {
+  try {
+    const usedResponse = await fetch(urlUsed);
+    const GetResultsUsed = await usedResponse.json();
+    createHTMLUsed(GetResultsUsed);
+  } catch (error) {
+    console.log(error);
+    usedProductContainer.innerHTML =
+      "Seems to be a glitch here, we are workin on it!";
+  }
+}
+
+getUsedProducts();
+
+function createHTMLUsed(usedProducts) {
+  usedProducts.forEach(function (product) {
+    for (let i = 0; i < product.length; i++) {
+      if (product[i].name === "New Game") continue;
+    }
+    usedProductContainer.innerHTML += `<div class="product-link"><a href="product.html?id=${product.id}">
+      <img src="${product.images[0].src}" alt="${product.name}"/>
+      <h2>${product.price_html}</h2>
+      <h2>${product.name}</h2></div>`;
   });
 }

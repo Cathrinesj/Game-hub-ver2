@@ -1,0 +1,49 @@
+<div class="product-spec"> 
+<section class="product-photo">
+    <img src="../images/covers/GameHub_covers4.jpg" alt="Picture of Game" id= picture class="product-image"/> 
+    <div class="thumbnail">
+      <div class= "product-photo_thumbnail">
+        <img src="../images/covers/GameHub_covers4.jpg" alt="Picture of Game" class="product-image"/>
+      </div> 
+    <div>
+      <img src="../images/covers/GameHub_covers4.jpg" alt="Picture of Game" class="product-image"/>
+    </div> 
+  </section> 
+<section class="product-buy">
+  <h1>Fortnite</h1>
+  <h2 id="price">NOK 199,-</h2>
+  <div id="cartButton" class="cta-big">Buy</div>
+  <div id="cartButton" class="cta-small fas fa-heart">Favourite</div>
+  <h3>Review:</h3>
+  <h3>
+    "I really enjoyed this one. If you are a fan of Fortnite, you will love it!"
+    - Borgund101
+  </h3>
+</section>
+<section class="product-text">
+  <h2>Details;</h2>
+  <p>
+    Bacon ipsum dolor amet rump pork spare ribs kevin biltong filet mignon tail
+    fatback. Bresaola pancetta ham hock andouille landjaeger t-bone tongue swine
+    hamburger. Pastrami bresaola boudin tongue hamburger venison, tail
+    landjaeger cow tenderloin kevin ribeye bacon
+  </p>
+</section>
+</div>
+<section class="other-products">
+    <h2>Others have also bought:</h2>
+    <div class= "thumbnail">
+      <div>
+        <img src="../images/covers/GameHub_covers3.jpg" alt="Picture of Game" class="product-image"/>
+        <h2 class="link">Black</h2>
+      </div> 
+      <div>
+        <img src="../images/covers/GameHub_covers5.jpg" alt="Picture of Game" class="product-image"/>
+        <h2 class="link">Assasin</h2>
+      </div> 
+      <div>
+        <img src="../images/covers/GameHub_covers8.jpg" alt="Picture of Game" class="product-image"/>
+        <h2 class="link">Boxer</h2>
+      </div>
+    </div>   
+  </section>

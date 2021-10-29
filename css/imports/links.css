@@ -7,7 +7,7 @@ a {
 }
 
 .product-link:hover {
-  margin: 4px;
+  border: 2px solid var(--purple);
 }
 
 .cta-small {
