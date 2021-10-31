@@ -3,10 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="GameHub - The Universe of Games" />
-    <title>GameHub | Home</title>
+    <meta
+      name="description"
+      content="GameHub - Fresh new games, ready for you"
+    />
+    <title>GameHub | New Games</title>
     <link href="css/styles.css" rel="stylesheet" />
-    <link href="css/index.css" rel="stylesheet" />
+    <link href="css/games.css" rel="stylesheet" />
     <link href="css/media.css" rel="stylesheet" />
     <script
       src="https://kit.fontawesome.com/2661e0888f.js"
@@ -40,9 +43,9 @@
         </a>
         <nav>
           <ul>
-            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="index.html">Home</a></li>
             <li><a href="newgames.html">New Games</a></li>
-            <li><a href="usedgames.html">Used Games</a></li>
+            <li class="active"><a href="usedgames.html">Used Games</a></li>
             <li><a href="sellgames.html">Sell Games</a></li>
           </ul>
         </nav>
@@ -50,65 +53,33 @@
           <a class="fas fa-search" href="search.html"></a>
           <a class="fas fa-user" href="login.html"></a>
           <a class="fas fa-heart" href="index.html"></a>
-          <i class="fas fa-desktop cart" onclick="displayCart()"></i>
+          <i class="fas fa-desktop cart myCart" onclick="cartTotal()"></i>
         </section>
       </div>
     </header>
     <main>
       <section>
-        <img
-          src="images/desk.jpg"
-          alt="Gamingstation, dim light"
-          class="spinner"
-        />
-      </section>
-      <div class="main-content">
-        <section class="forsale">
-          <h1>NEW GAMES</h1>
-          <div class="newProducts">
-            <div>
-              <div class="loader"></div>
-            </div>
-          </div>
-          <a href="newgames.html" class="cta-big"> View More </a>
-          <h1>USED GAMES</h1>
-          <div class="usedProducts">
-            <div>
-              <div class="loader"></div>
-            </div>
-          </div>
-          <a href="usedgames.html" class="cta-big"> View More </a>
-        </section>
-        <div class="articles">
-          <section class="stories">
-            <img
-              src="images/fortnite.jpg"
-              alt="Computer with Fortnite on front screen"
-            />
-            <p>Fortnite 3</p>
-            <p>Release date 03.10</p>
-            <a href="newgames.html" class="cta-big"> Preorder now </a>
-          </section>
-          <section class="stories">
-            <img
-              src="images/warzone.jpg"
-              alt="Computer with CAD Warzone on front screen"
-            />
-            <p>We went to this years LAN</p>
-            <p>@Vikinghallen, here is our report</p>
-            <div class="cta-small">Read More</div>
-          </section>
-          <section class="stories">
-            <img src="images/gamer.jpg" alt="Young man gaming" />
-            <p>Play live with old and new</p>
-            <p>friends, open 24/7</p>
-            <div class="cta-small">Read More</div>
-          </section>
+        <h1>GAMES</h1>
+        <h2>
+          Some text here about new games, how early the company gets hold of
+          them, who supplies them, etc. Also some information about the category
+          (SEO).
+        </h2>
+        <div class="categories">
+          <h2>Movie inspired</h2>
+          <h2 class="active">Fantasy</h2>
+          <h2>Driving</h2>
+          <h2>Fighting</h2>
         </div>
-      </div>
+        <div class="usedProducts">
+          <div>
+            <div class="loader"></div>
+          </div>
+        </div>
+      </section>
     </main>
     <script src="js/script.js"></script>
-    <script src="js/index.js"></script>
+    <script src="js/usedgames.js"></script>
     <footer>
       <section class="footer-menu">
         <div>

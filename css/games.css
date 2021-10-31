@@ -1,3 +1,7 @@
+h2 {
+  margin-bottom: 10px;
+}
+
 .categories {
   grid-column: -1/1;
   display: block;
@@ -7,4 +11,12 @@
 
 .categories {
   color: var(--dark-green);
+}
+
+.games-text {
+  margin-top: 10px;
+}
+
+.cta-small {
+  padding: 5px 30px;
 }

@@ -48,7 +48,7 @@ body {
 main {
    flex: 1 1;
    max-width: 320px;
-   margin: 350px auto;
+   margin: 350px auto auto auto;
    text-align: center;
 }
 
@@ -83,6 +83,10 @@ a {
   color: var(--dark-blue);
   display: inline-block;
   font-weight: 900;
+}
+
+.checkoutText {
+  margin-bottom: 10px;
 }
 
 .cta-small {
@@ -171,7 +175,7 @@ footer {
   width: 80px;
   height: 80px;
   animation: spin 2s linear infinite;
-  text-align: center;
+  place-items: center;
 }
 
 @keyframes spin {
@@ -182,6 +186,10 @@ footer {
       transform: rotate(360deg);
   }
 } 
+
+.loaderDisplay {
+  place-items: center;
+}
 
 
 

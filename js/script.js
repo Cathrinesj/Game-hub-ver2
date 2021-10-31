@@ -20,6 +20,6 @@ displayCart.onclick = function () {
     displayCart.innerHTML = "";
   } else {
     displayCart.style.display = "block";
-    displayCart.innerHTML = `Items: ${cartItemTotal} Total: NOK ${cartAmountTotal},- <a href="checkout.html" class="cta-small cta-checkout"> Checkout</a>`;
+    displayCart.innerHTML = `<div class="checkoutText">Items: ${cartItemTotal} Total: NOK ${cartAmountTotal},-</div> <a href="checkout.html" class="cta-small"> Checkout</a>`;
   }
 };
