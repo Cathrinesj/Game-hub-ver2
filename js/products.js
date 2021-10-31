@@ -19,9 +19,6 @@ getNewProducts();
 
 function createHTMLNew(newProducts) {
   newProducts.forEach(function (product) {
-    for (let i = 0; i < product.length; i++) {
-      if (product[i].name === "Used Game") continue;
-    }
     newProductContainer.innerHTML += `<div class="product-link"><a href="product.html?id=${product.id}">
       <img src="${product.images[0].src}" alt="${product.name}"/>
       <h2>${product.price_html}</h2>
@@ -50,9 +47,6 @@ getUsedProducts();
 
 function createHTMLUsed(usedProducts) {
   usedProducts.forEach(function (product) {
-    for (let i = 0; i < product.length; i++) {
-      if (product[i].name === "New Game") continue;
-    }
     usedProductContainer.innerHTML += `<div class="product-link"><a href="product.html?id=${product.id}">
       <img src="${product.images[0].src}" alt="${product.name}"/>
       <h2>${product.price_html}</h2>

@@ -20,13 +20,11 @@ async function fetchProduct() {
   } catch (error) {
     console.log(error);
     detailContainer.innerHTML =
-      "Seems to be a glitch here, we are workin on it!";
+      "Seems to be a glitch here, we are working on it!";
   } finally {
     console.log("Finally");
   }
 }
-
-fetchProduct();
 
 function createHtml(details) {
   detailContainer.innerHTML += `<div class="product-spec">
@@ -45,7 +43,7 @@ function createHtml(details) {
       <h1>${details.name}</h1>
       <h2 id="price">${details.price_html}</h2>
       <div id="cartButton" class="cta-big">Buy</div>
-      <div id="cartButton" class="cta-small fas fa-heart">Favourite</div>
+      <div class="cta-small fas fa-heart">Favourite</div>
       <h3>Review:</h3>
       <h3>
       "I really enjoyed this one. If you are a real gamer, you will love it!"
@@ -59,21 +57,18 @@ function createHtml(details) {
   </div>`;
 }
 
+fetchProduct();
+
 //We recommend
 
-const urlRec = "https://juvz.no/wp-json/wc/store/products?featured";
+const recommendUrl = "https://juvz.no/wp-json/wc/store/products?category=22";
 const recommendContainer = document.querySelector(".recommend");
 
-console.log(urlRec);
-
-async function getRecommand() {
+async function getRecommended() {
   try {
-    const recResponse = await fetch(urlRec);
-    const GetResultsRec = await recResponse.json();
-
-    console.log(getResultsRec);
-
-    createHTMLUsed(GetResultsRec);
+    const responseRec = await fetch(recommendUrl);
+    const getResultRecommended = await responseRec.json();
+    createHTMLRec(getResultRecommended);
   } catch (error) {
     console.log(error);
     recommendContainer.innerHTML =
@@ -81,8 +76,18 @@ async function getRecommand() {
   }
 }
 
-getRecommand();
+getRecommended();
 
-function createHTMLUsed(getResultsRec) {
-  recommendContainer.innerHTML += `<div class="product-link">`;
+function createHTMLRec(recommended) {
+  recommended.forEach(function (product) {
+    recommendContainer.innerHTML += `
+    <div>
+      <a href="product.html?id=${product.id}">
+      <div>
+        <img src="${product.images[0].src}" alt="${product.name}" class="product-image"/>
+      </div>
+      <h2>${product.price_html}</h2>
+      <h2>${product.name}</h2>
+    </div>`;
+  });
 }

@@ -30,7 +30,13 @@ h1, h2 {
     text-align: left;
 }
 
-.other-products {
+.rec {
+    margin-top: 30px;
+    color: var(--dark-green);
+}
+
+.recommend {
+    margin-top: 30px;
     max-width: 240px;
 }
   

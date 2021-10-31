@@ -7,17 +7,20 @@ h1,
 h2 {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   text-align: center;
-  padding: 5px;
 } 
 
 h1 {
   font-size: 24pt;
   font-style: bold;
+  padding: 5px;
+  color: var(--purple)
 }
 
 h2 {
   font-size: 12pt;
   font-style: bold;
+  margin: 2px;
+  color: var(--dark-green)
 }
 
 h3 {
@@ -159,10 +162,7 @@ footer {
   grid-column: -1/1;
 }
 
-.purple {
-  color: var(--purple);
-}
- 
+
 
 
 
