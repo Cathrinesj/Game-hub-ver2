@@ -44,8 +44,7 @@
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="newgames.html">New Games</a></li>
-            <li class="active"><a href="usedgames.html">Used Games</a></li>
+            <li class="active"><a href="games.html">Buy Games</a></li>
             <li><a href="sellgames.html">Sell Games</a></li>
           </ul>
         </nav>
@@ -65,21 +64,63 @@
           them, who supplies them, etc. Also some information about the category
           (SEO).
         </h2>
-        <div class="categories">
-          <h2>Movie inspired</h2>
-          <h2 class="active">Fantasy</h2>
-          <h2>Driving</h2>
-          <h2>Fighting</h2>
-        </div>
-        <div class="usedProducts">
-          <div>
-            <div class="loader"></div>
+        <div>
+          <div class="categories">
+            <input
+              type="radio"
+              id="Featured"
+              class="category"
+              name="category"
+              value="22"
+            />
+            <label for="Featured">Featured</label>
+            <input
+              type="radio"
+              id="New game"
+              class="category"
+              name="category"
+              value="16"
+            />
+            <label for="New game">New Games</label>
+            <input
+              type="radio"
+              id="Used Games"
+              class="category"
+              name="category"
+              value="17"
+            />
+            <label for="Used Game">Used Games</label>
+            <input
+              type="radio"
+              id="3"
+              class="category"
+              name="category"
+              value="25"
+            />
+            <label for="3">3+</label>
+            <input
+              type="radio"
+              id="16"
+              class="category"
+              name="category"
+              value="23"
+            />
+            <label for="16">16+</label>
+            <input
+              type="radio"
+              id="18"
+              class="category"
+              name="category"
+              value="24"
+            />
+            <label for="18">18+</label>
           </div>
         </div>
+        <div class="newProducts"></div>
       </section>
     </main>
     <script src="js/script.js"></script>
-    <script src="js/usedgames.js"></script>
+    <script src="js/games.js"></script>
     <footer>
       <section class="footer-menu">
         <div>
