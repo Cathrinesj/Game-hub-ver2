@@ -1,33 +1,26 @@
-const detailContainer = document.querySelector(".product-details");
 const queryString = document.location.search;
 const params = new URLSearchParams(queryString);
 const idProduct = params.get("id");
 
-console.log(idProduct);
-
 const url = "https://juvz.no/wp-json/wc/store/products/" + idProduct;
-
-console.log(url);
 
 async function fetchProduct() {
   try {
     const response = await fetch(url);
     const details = await response.json();
 
-    console.log(details);
+    const productInfo = details.id;
 
-    createHtml(details);
-  } catch (error) {
-    console.log(error);
-    detailContainer.innerHTML =
-      "Seems to be a glitch here, we are working on it!";
-  } finally {
-    console.log("Finally");
-  }
-}
+    const detailContainer = document.querySelector(".product-details");
+    const cartButton = document.querySelector("#cartButton");
+    const basketCart = document.querySelector(".basketCart");
 
-function createHtml(details) {
-  detailContainer.innerHTML += `<div class="product-spec">
+    detailContainer.innerHTML = "";
+
+    let total = 0;
+    let count = 0;
+
+    detailContainer.innerHTML += `<div class="product-spec">
   <div class="product-photo">
     <img src="${details.images[0].src}" alt="${details.name}" id= picture class="product-image"/>
     <div class="thumbnail">
@@ -55,6 +48,31 @@ function createHtml(details) {
     </div>  
   </div>
   </div>`;
+  } catch (error) {
+    console.log(error);
+    detailContainer.innerHTML =
+      "Seems to be a glitch here, we are working on it!";
+  } finally {
+  }
+  try {
+    const cartButton = document.querySelector("#cartButton");
+    const basketCart = document.querySelector(".basketCart");
+
+    let total = 0;
+    let count = 0;
+
+    cartButton.onclick = function () {
+      count++;
+      total += 199;
+      basketCart.style.display = "inline";
+      basketCart.innerHTML = ` ${total},-`;
+      localStorage.setItem("total", total);
+      localStorage.setItem("count", count);
+    };
+  } catch (error) {
+    console.log(error);
+  } finally {
+  }
 }
 
 fetchProduct();
@@ -62,6 +80,7 @@ fetchProduct();
 //We recommend
 
 const recommendUrl = "https://juvz.no/wp-json/wc/store/products?category=22";
+const recommendText = document.querySelector(".recommendText");
 const recommendContainer = document.querySelector(".recommend");
 
 async function getRecommended() {
@@ -77,6 +96,9 @@ async function getRecommended() {
 }
 
 getRecommended();
+
+recommendText.innerHTML += `
+    <h2>We recommend:</h2>`;
 
 function createHTMLRec(recommended) {
   recommended.forEach(function (product) {

@@ -7,6 +7,9 @@ async function getNewProducts() {
   try {
     const response = await fetch(urlNew);
     const getResultsNew = await response.json();
+
+    newProductContainer.innerHTML = "";
+
     createHTMLNew(getResultsNew);
   } catch (error) {
     console.log(error);
@@ -35,6 +38,9 @@ async function getUsedProducts() {
   try {
     const usedResponse = await fetch(urlUsed);
     const GetResultsUsed = await usedResponse.json();
+
+    usedProductContainer.innerHTML = "";
+
     createHTMLUsed(GetResultsUsed);
   } catch (error) {
     console.log(error);

@@ -23,7 +23,3 @@ displayCart.onclick = function () {
     displayCart.innerHTML = `Items: ${cartItemTotal} Total: NOK ${cartAmountTotal},- <a href="checkout.html" class="cta-small cta-checkout"> Checkout</a>`;
   }
 };
-
-const checkOut = document.querySelector(".checkOut");
-
-checkOut.innerHTML = `Number of items: ${cartItemTotal} <h2>Total: ${cartAmountTotal},-</h2>`;

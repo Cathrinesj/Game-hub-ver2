@@ -88,3 +88,7 @@ function checkTerms(value) {
     }
   }
 }
+
+const checkOut = document.querySelector(".checkOut");
+
+checkOut.innerHTML = `Number of items: ${cartItemTotal} <h2>Total: ${cartAmountTotal},-</h2>`;
