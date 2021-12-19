@@ -1,5 +1,4 @@
 @media (min-width: 600px) {
-
   /*General*/
 
   main {
@@ -27,10 +26,11 @@
     max-width: 120px;
   }
 
-  nav, ul {
+  nav,
+  ul {
     display: inline-flex;
   }
-  
+
   .cta-big {
     grid-column-start: 2;
     grid-column-end: 4;
@@ -46,8 +46,8 @@
   }
 
   /*Products*/
- 
-  .newProducts, .usedProducts {
+
+  .products {
     grid-template-columns: repeat(4, 1fr);
     max-width: 600px;
   }
@@ -70,9 +70,9 @@
     grid-column-start: 1;
     grid-column-end: 5;
   }
-  
+
   /*FLEX*/
-  
+
   .flex-wrap {
     flex-direction: row;
   }
@@ -83,11 +83,9 @@
     display: inline-flex;
     justify-content: space-evenly;
   }
-
-} 
+}
 
 @media (min-width: 1024px) {
-
   /*General*/
 
   main {
@@ -98,16 +96,16 @@
     max-width: 200px;
   }
 
-   /*Products*/
-  
-  .newProducts, .usedProducts {
+  /*Products*/
+
+  .products {
     max-width: 800px;
   }
 
   /*Flex*/
 
   .main-content {
-    display:flex;
+    display: flex;
   }
 
   .forsale {
@@ -119,5 +117,4 @@
     max-width: 300px;
     margin: 50px auto;
   }
-
-}  
+}

@@ -1,5 +1,5 @@
 const baseUrl = "https://juvz.no/wp-json/wc/store/products";
-const productContainer = document.querySelector(".newProducts");
+const productContainer = document.querySelector(".products");
 const categories = document.querySelectorAll(".categories");
 
 async function getProducts(url) {

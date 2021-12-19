@@ -1,16 +1,14 @@
-//Products newgames
+const url = "https://juvz.no/wp-json/wc/store/products";
+const newProductContainer = document.querySelector(".products");
 
-const urlNew = "https://juvz.no/wp-json/wc/store/products?category=16";
-const newProductContainer = document.querySelector(".newProducts");
-
-async function getNewProducts() {
+async function getProducts() {
   try {
-    const response = await fetch(urlNew);
+    const response = await fetch(url);
     const getResultsNew = await response.json();
 
     newProductContainer.innerHTML = "";
 
-    createHTMLNew(getResultsNew);
+    createHTML(getResultsNew);
   } catch (error) {
     console.log(error);
     newProductContainer.innerHTML =
@@ -18,10 +16,10 @@ async function getNewProducts() {
   }
 }
 
-getNewProducts();
+getProducts();
 
-function createHTMLNew(newProducts) {
-  newProducts.forEach(function (product) {
+function createHTML(products) {
+  products.forEach(function (product) {
     newProductContainer.innerHTML += `<div class="product-link"><a href="product.html?id=${product.id}">
       <img src="${product.images[0].src}" alt="${product.name}"/>
       <h2>${product.price_html}</h2>
@@ -29,47 +27,18 @@ function createHTMLNew(newProducts) {
   });
 }
 
-//Products usedgames
-
-const urlUsed = "https://juvz.no/wp-json/wc/store/products?category=17";
-const usedProductContainer = document.querySelector(".usedProducts");
-
-async function getUsedProducts() {
-  try {
-    const usedResponse = await fetch(urlUsed);
-    const GetResultsUsed = await usedResponse.json();
-
-    usedProductContainer.innerHTML = "";
-
-    createHTMLUsed(GetResultsUsed);
-  } catch (error) {
-    console.log(error);
-    usedProductContainer.innerHTML =
-      "Seems to be a glitch here, we are workin on it!";
-  }
-}
-
-getUsedProducts();
-
-function createHTMLUsed(usedProducts) {
-  usedProducts.forEach(function (product) {
-    usedProductContainer.innerHTML += `<div class="product-link"><a href="product.html?id=${product.id}">
-      <img src="${product.images[0].src}" alt="${product.name}"/>
-      <h2>${product.price_html}</h2>
-      <h2>${product.name}</h2></div>`;
-  });
-}
-
-/*
-//Tried several types of solutions like below
+/*//Tried several types of solutions like below
 
 const baseUrl = "https://juvz.no/wp-json/wc/store/products";
-const categories = document.querySelectorAll(".loadgames");
+const loader = document.querySelector(".loader");
 const sortedCatergory = document.querySelectorAll(".sortedCategory");
 
-async function getProducts() {
-  const response = await fetch(baseUrl);
+async function getProducts(url) {
+  const response = await fetch(url);
   const products = await response.json();
+
+  loader.innerHTML = "";
+
   products.forEach(function (product) {
     sortedCatergory.innerHTML += `<div class="games-text">
       <img src="${product.images[0].src}" alt="${product.name}"/>
@@ -80,18 +49,18 @@ async function getProducts() {
   });
 }
 
-getProducts();
+getProducts(baseUrl);
 
 sortedCatergory.forEach(function (category) {
-  category.onload = function (event) {
+  category(function (event) {
     let newUrl;
     let usedUrl;
-    if (event.target.id === "16") {
-      newUrl = baseUrl + "?category=16";
-    } else if (event.target.id === "17") {
-      usedUrl = baseUrl + `?category=17`;
+    if (event.target.dataset.category === "16") {
+      newUrl = url + "?category=16";
     }
-    sortedCatergory.innerHTML = "";
+    if (event.target.dataset.category === "17") {
+      usedUrl = url + `?category=17`;
+    }
     getProducts(newUrl, usedUrl);
-  };
+  });
 });*/
