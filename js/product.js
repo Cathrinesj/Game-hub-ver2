@@ -9,16 +9,9 @@ async function fetchProduct() {
     const response = await fetch(url);
     const details = await response.json();
 
-    const productInfo = details.id;
-
     const detailContainer = document.querySelector(".product-details");
-    const cartButton = document.querySelector("#cartButton");
-    const basketCart = document.querySelector(".basketCart");
 
     detailContainer.innerHTML = "";
-
-    let total = 0;
-    let count = 0;
 
     detailContainer.innerHTML += `<div class="product-spec">
   <div class="product-photo">

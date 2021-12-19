@@ -5,93 +5,58 @@
 
 h1,
 h2 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
-} 
+}
 
 h1 {
   font-size: 24pt;
   font-style: bold;
   padding: 5px;
-  color: var(--purple)
+
+  color: var(--purple);
 }
 
 h2 {
   font-size: 12pt;
   font-style: bold;
   margin: 2px;
-  color: var(--dark-green)
+  color: var(--dark-green);
 }
 
 h3 {
   display: inline;
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   font-size: 10pt;
-  font-style: bold; 
+  font-style: bold;
 }
 
 img {
   width: 100%;
 }
 
-html, body {
-  height: 100%
+html,
+body {
+  height: 100%;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: Georgia, "Times New Roman", Times, serif;
   min-height: 100vh;
 }
 
 main {
-   flex: 1 1;
-   max-width: 320px;
-   margin: 350px auto auto auto;
-   text-align: center;
-}
-
-header, nav {
-  background-color: var(--light-green); 
+  flex: 1 1;
+  max-width: 320px;
+  margin: 350px auto auto auto;
   text-align: center;
-  color: var(--light-green);
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  padding: 10px;
-  border-bottom: 2px solid var(--dark-green);
-}
-
-nav {
-  display: none;
-}
-
-ul, li {
-  padding: 10px;
-} 
-
-a {
-  color: var(--dark-blue);
-} 
-
-.fas, .far {
-  padding: 10px 25px 10px 25px;
-  color: var(--dark-blue);
-  display: inline-block;
-  font-weight: 900;
-}
-
-.checkoutText {
-  margin-bottom: 10px;
 }
 
 .cta-small {
-grid-column: 1;
-grid-row: 4;
+  grid-column: 1;
+  grid-row: 4;
 }
 
 .cta-big {
@@ -100,7 +65,7 @@ grid-row: 4;
 }
 
 .stories {
-  margin-bottom: 20px; 
+  margin-bottom: 20px;
 }
 
 .logofooter {
@@ -110,7 +75,7 @@ grid-row: 4;
 }
 
 footer a {
-  display:block;
+  display: block;
   color: var(--light-green);
   padding: 5px;
   margin: 10px;
@@ -125,15 +90,91 @@ footer {
   flex-shrink: 0;
 }
 
+/*Header*/
+
+header,
+nav {
+  background-color: var(--light-green);
+  text-align: center;
+  color: var(--light-green);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  padding: 10px;
+  border-bottom: 2px solid var(--dark-green);
+}
+
+nav {
+  display: none;
+}
+
+ul,
+li {
+  padding: 10px;
+  list-style: none;
+}
+
+a {
+  color: var(--dark-blue);
+}
+
+.fas,
+.far {
+  padding: 10px 25px 10px 25px;
+  color: var(--dark-blue);
+  display: inline-block;
+  font-weight: 900;
+}
+
+/*Overlay Checkout
+/*From: https://www.w3schools.com/howto/howto_js_fullscreen_overlay.asp*/
+
+.overlay {
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  top: 0;
+  left: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.9);
+  overflow-x: hidden;
+}
+
+.overlay-content {
+  position: relative;
+  background-color: var(--light-green);
+  top: 25%;
+  width: 100%;
+  height: 20%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.fa-times {
+  font-size: 30px;
+  color: var(--dark-blue);
+  padding: 8px;
+  transition: 0.2s;
+}
+
+.fa-times:hover,
+.fa-times:focus {
+  color: var(--purple);
+}
+
 /*FLEX*/
 
 footer {
   flex-shrink: 0;
- }
+}
 
- /*Products*/
+/*Products*/
 
-.newProducts, .usedProducts {
+.newProducts,
+.usedProducts {
   display: grid;
   grid-template-columns: 1fr 1fr;
   max-width: 320px;
@@ -180,20 +221,13 @@ footer {
 
 @keyframes spin {
   0% {
-      transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-      transform: rotate(360deg);
+    transform: rotate(360deg);
   }
-} 
+}
 
 .loaderDisplay {
   place-items: center;
 }
-
-
-
-
-
- 
- 

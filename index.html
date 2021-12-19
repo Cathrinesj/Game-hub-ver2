@@ -49,7 +49,7 @@
           <a class="fas fa-search" href="search.html"></a>
           <a class="fas fa-user" href="login.html"></a>
           <a class="fas fa-heart" href="index.html"></a>
-          <i class="fas fa-desktop cart" onclick="displayCart()"></i>
+          <i class="fas fa-desktop cart" onclick="openBasket()"></i>
         </section>
       </div>
     </header>
@@ -62,16 +62,16 @@
         />
       </section>
       <div class="main-content">
-        <section class="forsale">
+        <section class="forsale loadgames">
           <h1>NEW GAMES</h1>
-          <div class="newProducts">
+          <div class="sortedCategory newProducts" id="16">
             <div>
               <div class="loader"></div>
             </div>
           </div>
           <a href="games.html" class="cta-big"> View More </a>
           <h1>USED GAMES</h1>
-          <div class="usedProducts">
+          <div class="sortedCategory usedProducts" id="17">
             <div>
               <div class="loader"></div>
             </div>
@@ -106,8 +106,6 @@
         </div>
       </div>
     </main>
-    <script src="js/script.js"></script>
-    <script src="js/index.js"></script>
     <footer>
       <section class="footer-menu">
         <div>
@@ -126,5 +124,7 @@
         </a>
       </section>
     </footer>
+    <script src="js/script.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>

@@ -19,7 +19,12 @@ displayCart.onclick = function () {
     displayCart.style.display = "inline";
     displayCart.innerHTML = "";
   } else {
-    displayCart.style.display = "block";
-    displayCart.innerHTML = `<div class="checkoutText">Items: ${cartItemTotal} Total: NOK ${cartAmountTotal},-</div> <a href="checkout.html" class="cta-small"> Checkout</a>`;
+    displayCart.innerHTML = `<div id="myCart" class="overlay"><div class="overlay-content"><i class="fas fa-times" onclick="history.back()"></i><p>Items: ${cartItemTotal} Total: NOK ${cartAmountTotal},- <a href="checkout.html" class="cta-small"> Checkout</a></div></div>`;
+    document.getElementById("myCart").style.width = "100%";
   }
 };
+
+function closeBasket() {
+  displayCart.innerHTML = "";
+  document.getElementById("myCart").style.width = "0%";
+}

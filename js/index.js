@@ -59,3 +59,39 @@ function createHTMLUsed(usedProducts) {
       <h2>${product.name}</h2></div>`;
   });
 }
+
+/*
+//Tried several types of solutions like below
+
+const baseUrl = "https://juvz.no/wp-json/wc/store/products";
+const categories = document.querySelectorAll(".loadgames");
+const sortedCatergory = document.querySelectorAll(".sortedCategory");
+
+async function getProducts() {
+  const response = await fetch(baseUrl);
+  const products = await response.json();
+  products.forEach(function (product) {
+    sortedCatergory.innerHTML += `<div class="games-text">
+      <img src="${product.images[0].src}" alt="${product.name}"/>
+      <h2>${product.price_html}</h2>
+      <h2>${product.name}</h2>
+      <a href="product.html?id=${product.id}" class="cta-small">View</a>
+      </div>`;
+  });
+}
+
+getProducts();
+
+sortedCatergory.forEach(function (category) {
+  category.onload = function (event) {
+    let newUrl;
+    let usedUrl;
+    if (event.target.id === "16") {
+      newUrl = baseUrl + "?category=16";
+    } else if (event.target.id === "17") {
+      usedUrl = baseUrl + `?category=17`;
+    }
+    sortedCatergory.innerHTML = "";
+    getProducts(newUrl, usedUrl);
+  };
+});*/
